@@ -437,8 +437,13 @@
       <p>Escríbenos y te responderemos a la mayor brevedad para valorar tu caso y darte cita.</p>
     </div>
 
-    <!-- Formulario estático: sustituir "TU_ID_FORMSPREE" por tu endpoint real (ver README-IMAGENES.md) -->
-    <form class="contact-form" data-reveal="right" action="https://formspree.io/f/TU_ID_FORMSPREE" method="POST">
+    <!-- Formulario gestionado por Netlify Forms: las notificaciones por email se
+         configuran en el panel de Netlify (ver DOMINIO-Y-DESPLIEGUE.md), no aquí. -->
+    <form class="contact-form" data-reveal="right" name="contacto" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/gracias.html">
+      <input type="hidden" name="form-name" value="contacto">
+      <p class="hp-field">
+        <label>No rellenar si eres humano: <input name="bot-field"></label>
+      </p>
       <div class="form-row">
         <label>
           Nombre
@@ -487,9 +492,14 @@
   </div>
 </footer>
 
-<a href="https://wa.me/34606311319?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20una%20cita" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Escríbenos por WhatsApp">
-  <svg viewBox="0 0 32 32" width="28" height="28" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-1.9c1.8 1 3.9 1.5 6.1 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22c-2 0-3.9-.6-5.5-1.6l-.4-.2-4.6 1.2 1.2-4.4-.3-.4A9.9 9.9 0 016 15c0-5.5 4.5-10 10-10s10 4.5 10 10-4.5 10-10 10zm5.6-7.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2s-.8 1-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/></svg>
-</a>
+<div class="float-stack">
+  <a href="https://www.instagram.com/clinicaanaescapa/" target="_blank" rel="noopener" class="social-float instagram-float" aria-label="Visítanos en Instagram">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="1.1" fill="#fff" stroke="none"/></svg>
+  </a>
+  <a href="https://wa.me/34606311319?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20una%20cita" target="_blank" rel="noopener" class="social-float whatsapp-float" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 32 32" width="28" height="28" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-1.9c1.8 1 3.9 1.5 6.1 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22c-2 0-3.9-.6-5.5-1.6l-.4-.2-4.6 1.2 1.2-4.4-.3-.4A9.9 9.9 0 016 15c0-5.5 4.5-10 10-10s10 4.5 10 10-4.5 10-10 10zm5.6-7.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2s-.8 1-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/></svg>
+  </a>
+</div>
 
 <script src="js/main.js" defer></script>
 </body>

@@ -550,6 +550,7 @@ section { position: relative; padding: clamp(70px, 8vw, 130px) 0; }
   box-shadow: 0 0 0 4px rgba(92,122,63,0.15);
 }
 .contact-form button { align-self: flex-start; }
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 /* ============ Footer ============ */
 .site-footer { background: var(--verde-oscuro); color: rgba(255,255,255,0.85); padding: 50px 0 20px; }
@@ -562,20 +563,30 @@ section { position: relative; padding: clamp(70px, 8vw, 130px) 0; }
 .footer-bottom { padding-top: 20px; }
 .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.55); text-align: center; margin: 0; }
 
-/* ============ WhatsApp float ============ */
-.whatsapp-float {
+/* ============ Botones flotantes (WhatsApp / Instagram) ============ */
+.float-stack {
   position: fixed;
   bottom: 26px; right: 26px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 400;
+}
+.social-float {
   width: 58px; height: 58px;
-  background: #25D366;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 10px 30px -8px rgba(0,0,0,0.35);
-  z-index: 400;
   animation: pulse 3.5s ease-in-out infinite;
   transition: transform var(--dur-fast) var(--ease-out);
+  flex-shrink: 0;
 }
-.whatsapp-float:hover { transform: scale(1.1); }
+.social-float:hover { transform: scale(1.1); }
+.whatsapp-float { background: #25D366; }
+.instagram-float {
+  background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  animation-delay: -1.2s;
+}
 
 /* ============ Responsive ============ */
 @media (max-width: 1000px) {

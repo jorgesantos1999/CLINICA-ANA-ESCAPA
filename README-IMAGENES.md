@@ -35,12 +35,10 @@ Google Business Profile.
 
 ## 3. Formulario de contacto
 
-El formulario de la sección "Contacto" usa [Formspree](https://formspree.io) (gratis
-hasta 50 envíos/mes). Pasos:
-
-1. Crea una cuenta gratuita en formspree.io con el email de la clínica.
-2. Crea un formulario nuevo, te dará una URL tipo `https://formspree.io/f/xxxxxxx`.
-3. Sustituye `TU_ID_FORMSPREE` en `index.html` (dentro de `<form action="...">`) por esa URL.
+El formulario usa **Netlify Forms** (incluido gratis con el hosting, hasta 100 envíos al
+mes — no hace falta ninguna cuenta ni servicio externo). Solo falta un paso, que se
+configura en el panel de Netlify, no en el código — ver el punto 6 de
+[DOMINIO-Y-DESPLIEGUE.md](DOMINIO-Y-DESPLIEGUE.md).
 
 ## 4. Cómo ver la web
 

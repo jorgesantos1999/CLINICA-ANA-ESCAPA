@@ -1,71 +1,116 @@
-# Guía paso a paso: dominio, hosting y Google
+# Guía paso a paso: subir la web a Netlify y conectar clinicaanaescapa.es
 
-Esto es lo único que **tienes que hacer tú** (requiere pagar y crear cuentas, así que no
-puedo hacerlo por ti) — pero te dejo cada paso exacto para que sea rápido. Cuando lo
-tengas, dime y te ayudo con la parte técnica (DNS, verificación, etc.).
+Ya está listo por mi parte: el proyecto tiene un repositorio Git local con un primer
+commit (`C:\CLAUDE CODE`), preparado para subir a GitHub y desplegar en Netlify. Los
+pasos que quedan requieren que crees cuentas y pulses botones tú mismo (no puedo
+crear cuentas ni introducir pagos en tu nombre), pero aquí tienes cada paso exacto.
 
-## 1. Comprar el dominio
+## 1. Crear tu cuenta de GitHub (gratis, 2 minutos)
 
-Recomendado: **`clinicaanaescapa.es`** (coincide con el nombre del negocio y con
-@clinicaanaescapa de Instagram — ideal para SEO local y para que Google lo reconozca
-como la web oficial). Comprobado disponible hoy.
+1. Ve a **github.com/join**.
+2. Regístrate con el email de la clínica (o el tuyo) y una contraseña.
+3. Verifica el email cuando te lo pidan.
 
-Dónde comprarlo:
+## 2. Instalar GitHub Desktop (la forma más fácil de subir el proyecto, sin usar la terminal)
 
-- **Nominalia** — registrador español, especializado en dominios `.es`, buena opción si
-  quieres soporte en español y todo (dominio + hosting) en el mismo sitio.
-- **IONOS** — también español/alemán, con planes de hosting incluidos si no quieres usar
-  Netlify.
-- **Namecheap** — más internacional, también soporta `.es`.
+1. Descarga **GitHub Desktop** desde **desktop.github.com** e instálalo.
+2. Ábrelo e inicia sesión con la cuenta de GitHub que acabas de crear.
+3. Menú **File → Add local repository...**
+4. Selecciona la carpeta `C:\CLAUDE CODE` (ya tiene el repositorio Git preparado).
+5. GitHub Desktop mostrará un botón **"Publish repository"** arriba — púlsalo.
+   - Puedes dejarlo como repositorio **público** (recomendado, es solo el código de
+     una web, no hay datos sensibles) o marcarlo como privado si prefieres.
+   - Esto crea el repositorio en tu cuenta de GitHub automáticamente, sin tener que
+     crearlo antes en la web.
 
-⚠️ Los dominios `.es` exigen que el titular tenga NIF/NIE/CIF o sea residente de la UE —
-tu madre, como autónoma/empresa en España, cumple esto sin problema. Te pedirán ese dato
-al comprar.
+A partir de ahora, cada vez que yo (o tú) cambiéis algo en la web, en GitHub Desktop
+aparecerá el cambio listo para "Commit" y "Push origin" — así de simple se actualiza
+la web en el futuro.
 
-El precio del primer año suele estar rebajado (a veces por debajo de 5€) y la renovación
-anual ronda los 10-15€/año — compara el precio de renovación, no solo el de bienvenida.
+## 3. Crear la cuenta de Netlify y desplegar la web
 
-Compra también, si quieres, la versión `.com` (`clinicaanaescapa.com`) para redirigirla
-al `.es` y evitar que otro la registre — es opcional pero barato y recomendable a largo
-plazo.
+1. Ve a **app.netlify.com/signup**.
+2. Elige **"Sign up with GitHub"** — así quedan conectadas las dos cuentas directamente
+   (te pedirá autorizar el acceso, acéptalo).
+3. En el panel de Netlify: **"Add new site" → "Import an existing project"**.
+4. Elige **GitHub**, autoriza si te lo pide, y selecciona el repositorio que acabas de
+   publicar (el nombre de la carpeta, algo como `CLAUDE-CODE` o el que le hayas puesto).
+5. En la configuración de despliegue:
+   - **Build command**: déjalo vacío.
+   - **Publish directory**: pon un punto `.`
+6. Pulsa **"Deploy site"**. En un minuto tendrás la web publicada en una URL temporal
+   tipo `algo-aleatorio-123.netlify.app` — ábrela para comprobar que todo se ve bien.
 
-## 2. Elegir hosting (dónde "vive" la web)
+## 4. Conectar tu dominio clinicaanaescapa.es
 
-Como esta web es estática (HTML/CSS/JS, sin base de datos), lo más simple y sin coste es:
+1. En el panel de tu sitio en Netlify: **"Domain settings" → "Add a domain"**.
+2. Escribe `clinicaanaescapa.es` y confirma. Netlify comprobará que ya es tuyo (por
+   estar registrado) y te ofrecerá dos formas de conectarlo — usa la **opción A**, es
+   la más simple y la que recomiendo:
 
-- **Netlify** o **Vercel** (gratis, HTTPS automático, arrastras la carpeta del proyecto y
-  ya está online). Recomendado si quieres la opción más rápida y sin mantenimiento.
-- Si prefieres todo con el mismo proveedor español (factura única, soporte en español),
-  el hosting de **IONOS** o **Nominalia** también sirve perfectamente para esta web.
+### Opción A (recomendada): usar los DNS de Netlify
 
-## 3. Conectar el dominio comprado con el hosting
+1. Netlify te mostrará 4 "nameservers" (servidores de nombres), algo como:
+   `dns1.p05.nsone.net`, `dns2.p05.nsone.net`, etc.
+2. Entra en el panel de administración de tu dominio, en el proveedor donde lo
+   compraste (busca una sección llamada **"Nameservers"**, **"Servidores DNS"** o
+   **"Servidores de nombres"**).
+3. Sustituye los que haya puestos por los 4 que te dio Netlify.
+4. Guarda los cambios.
 
-1. En Netlify/Vercel: "Add custom domain" → escribe `clinicaanaescapa.es`.
-2. Te darán 1-2 registros DNS (normalmente un registro tipo `A` o `CNAME`).
-3. Entra en el panel de tu registrador (Nominalia/IONOS/Namecheap) → gestión de DNS del
-   dominio → añade esos registros tal cual te los den.
-4. Espera unas horas (a veces minutos) a que se propague. El propio hosting activará el
-   HTTPS automáticamente en cuanto detecte el dominio apuntando bien.
+La propagación suele tardar entre unos minutos y pocas horas. Netlify detectará el
+cambio automáticamente y activará el certificado HTTPS gratis (Let's Encrypt) sin que
+tengas que hacer nada más.
 
-## 4. Vincular con Google
+### Opción B (alternativa, si tu proveedor no te deja cambiar los nameservers)
 
-1. **Google Search Console** (search.google.com/search-console) → "Añadir propiedad" →
-   pon `https://www.clinicaanaescapa.es` → te dará un código de verificación → pégalo en
-   `index.html`, en esta línea que ya está preparada (solo quítale el comentario):
-   ```html
-   <meta name="google-site-verification" content="TU_CODIGO_AQUI">
-   ```
-2. **Google Business Profile** (antes Google My Business) → edita la ficha del negocio →
-   añade `https://www.clinicaanaescapa.es` como sitio web. Esto es lo que hace que la web
-   aparezca enlazada desde Google Maps y desde la ficha que sale al buscar "Clínica Ana
-   Escapa" en Google.
-3. (Opcional) **Google Analytics** → crea una propiedad → te da un script `gtag.js` →
-   pégalo justo antes de `</head>` en `index.html` y dime, te lo integro yo si prefieres.
+Añade estos dos registros en el DNS de tu proveedor, dejando el resto como está:
 
-## 5. Cuando tengas el dominio comprado
+| Tipo  | Nombre/Host | Valor |
+|-------|-------------|-------|
+| A     | @ (o vacío) | `75.2.60.5` |
+| CNAME | www         | `TU-SITIO.netlify.app` (el que te asignó Netlify en el paso 3) |
 
-Dímelo y yo me encargo de:
-- Actualizar todas las URLs del sitio (`index.html`, `sitemap.xml`, `robots.txt`, JSON-LD)
-  si cambia el nombre final del dominio.
-- Ayudarte a configurar los registros DNS exactos.
-- Integrar el código de verificación de Google y/o Analytics.
+## 5. Verificar que todo funciona
+
+- Entra en `https://clinicaanaescapa.es` — debería cargar la web con el candado de
+  HTTPS activo (puede tardar hasta un par de horas en activarse el certificado tras
+  la propagación del DNS).
+- Si después de unas horas sigue sin funcionar, dime en qué paso te has quedado y el
+  mensaje exacto que te aparece, y lo revisamos juntos.
+
+## 6. Recibir los mensajes del formulario de contacto por email
+
+El formulario de "Contacto" usa **Netlify Forms** (ya integrado en el código, gratis
+hasta 100 envíos/mes, sin necesidad de crear ninguna cuenta externa). Solo falta decirle
+a Netlify a qué email avisar cuando alguien lo rellene:
+
+1. En el panel de Netlify, entra en tu sitio → **"Forms"** (en el menú lateral).
+   La primera vez que hagas un deploy con el formulario, aparecerá listado ahí
+   automáticamente como "contacto".
+2. Ve a **"Settings" → "Forms" → "Form notifications" → "Add notification" →
+   "Email notification"**.
+3. En el campo de email, escribe `jorgesantosescapa@gmail.com`.
+4. Guarda. A partir de ahí, cada vez que alguien rellene el formulario de la web,
+   te llegará un email a esa dirección con el nombre, teléfono, email y mensaje.
+
+Después de enviar el formulario, el visitante verá una página de agradecimiento propia
+de la web (`gracias.html`), no la genérica de Netlify.
+
+## 7. Vincular con Google (una vez la web esté online con el dominio final)
+
+1. **Google Search Console** (search.google.com/search-console) → añade la propiedad
+   `https://www.clinicaanaescapa.es` → copia el código de verificación que te da →
+   pégamelo y lo añado yo en el `<meta name="google-site-verification">` que ya está
+   preparado en `index.html`.
+2. **Google Business Profile** → edita la ficha del negocio → añade
+   `https://www.clinicaanaescapa.es` como web.
+3. (Opcional) **Google Analytics** → crea una propiedad → pégame el script `gtag.js`
+   que te den y lo integro en la web.
+
+## 8. Actualizar la web en el futuro
+
+Cualquier cambio que hagamos en los archivos locales solo hay que:
+1. Abrir GitHub Desktop → verás los cambios listados → escribe un resumen breve →
+   **"Commit to master"** → **"Push origin"**.
+2. Netlify detecta el push y vuelve a publicar la web automáticamente en 1-2 minutos.
