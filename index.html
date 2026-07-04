@@ -175,7 +175,11 @@
 
 <!-- ===== SOBRE LA CLÍNICA ===== -->
 <section class="about" id="sobre-mi">
-  <div class="container about-grid">
+  <div class="container">
+    <p class="section-eyebrow center">Sobre la clínica</p>
+    <h2 class="center" data-reveal>Una consulta pensada para que te sientas escuchada</h2>
+
+    <div class="about-grid">
     <div class="about-media" data-reveal="left">
       <div class="photo-frame photo-doctora">
         <div class="photo-caption">Dra. Ana Escapa</div>
@@ -187,8 +191,6 @@
     </div>
 
     <div class="about-content" data-reveal="right">
-      <p class="section-eyebrow">Sobre la clínica</p>
-      <h2>Una consulta pensada para que te sientas escuchada</h2>
       <p>
         La <strong>Dra. Ana Escapa</strong> es licenciada en Medicina y Cirugía y está especializada
         en medicina estética. Desde hace más de 17 años dirige su clínica en el centro de Palencia,
@@ -218,6 +220,7 @@
           <p>El objetivo es realzar tu imagen, nunca cambiar quién eres.</p>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </section>
@@ -378,11 +381,12 @@
 
 <!-- ===== UBICACIÓN ===== -->
 <section class="location" id="ubicacion">
-  <div class="container location-grid">
-    <div class="location-info" data-reveal="left">
-      <p class="section-eyebrow">Ubicación &amp; horario</p>
-      <h2>Te esperamos en el centro de Palencia</h2>
+  <div class="container">
+    <p class="section-eyebrow center">Ubicación &amp; horario</p>
+    <h2 class="center" data-reveal>Te esperamos en el centro de Palencia</h2>
 
+    <div class="location-grid">
+    <div class="location-info" data-reveal="left">
       <ul class="info-list">
         <li>
           <span class="info-icon"><svg class="icon"><use href="#i-pin"></use></svg></span>
@@ -425,21 +429,20 @@
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
+    </div>
   </div>
 </section>
 
 <!-- ===== CONTACTO ===== -->
 <section class="contact" id="contacto">
-  <div class="container contact-grid">
-    <div class="contact-copy" data-reveal="left">
-      <p class="section-eyebrow">Contacto</p>
-      <h2>Cuéntanos qué necesitas</h2>
-      <p>Escríbenos y te responderemos a la mayor brevedad para valorar tu caso y darte cita.</p>
-    </div>
+  <div class="container">
+    <p class="section-eyebrow center">Contacto</p>
+    <h2 class="center" data-reveal>Cuéntanos qué necesitas</h2>
+    <p class="section-lead center" data-reveal>Escríbenos y te responderemos a la mayor brevedad para valorar tu caso y darte cita.</p>
 
     <!-- Formulario gestionado por Netlify Forms: las notificaciones por email se
          configuran en el panel de Netlify (ver DOMINIO-Y-DESPLIEGUE.md), no aquí. -->
-    <form class="contact-form" data-reveal="right" name="contacto" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/gracias.html">
+    <form class="contact-form" data-reveal name="contacto" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/gracias.html">
       <input type="hidden" name="form-name" value="contacto">
       <p class="hp-field">
         <label>No rellenar si eres humano: <input name="bot-field"></label>
@@ -468,6 +471,7 @@
 </section>
 
 </main>
+
 
 <!-- ===== FOOTER ===== -->
 <footer class="site-footer">
