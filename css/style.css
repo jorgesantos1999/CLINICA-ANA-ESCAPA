@@ -552,6 +552,36 @@ section { position: relative; padding: clamp(70px, 8vw, 130px) 0; }
 .contact-form button { align-self: flex-start; }
 .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
+/* ============ Página de agradecimiento ============ */
+.thanks {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding-top: 160px;
+}
+.thanks-inner { max-width: 620px; margin: 0 auto; text-align: center; }
+.thanks-logo {
+  position: relative;
+  width: 86px;
+  margin: 0 auto 28px;
+}
+.thanks-logo img {
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+}
+.thanks-check {
+  position: absolute;
+  bottom: -10px; right: -10px;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: var(--verde-primario);
+  border: 3px solid var(--crema);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow-card);
+}
+.thanks-text { max-width: 480px; margin: 0 auto 2.2em; }
+.thanks-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
 /* ============ Footer ============ */
 .site-footer { background: var(--verde-oscuro); color: rgba(255,255,255,0.85); padding: 50px 0 20px; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; padding-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.12); }
