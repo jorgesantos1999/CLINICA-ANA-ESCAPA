@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínica Dra. Ana Escapa | Medicina Estética, Nutrición y Homeopatía en Palencia</title>
+<meta name="description" content="Clínica Dra. Ana Escapa en Palencia: más de 17 años de experiencia en medicina estética facial y corporal, nutrición, dietética y homeopatía. Ácido hialurónico, botox, Hydrafacial, IPL y más. Pide tu cita.">
+<meta name="keywords" content="clínica estética Palencia, medicina estética Palencia, Ana Escapa, ácido hialurónico Palencia, botox Palencia, nutrición Palencia, Hydrafacial, homeopatía Palencia">
+<meta name="author" content="Clínica Dra. Ana Escapa">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.clinicaanaescapa.es/">
+
+<!-- Open Graph / redes sociales -->
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Clínica Dra. Ana Escapa | Medicina Estética y Nutrición en Palencia">
+<meta property="og:description" content="Más de 17 años cuidando la piel, el cuerpo y el bienestar de nuestros pacientes en Palencia. Medicina estética, nutrición y homeopatía.">
+<meta property="og:image" content="images/og-image.jpg">
+<meta property="og:url" content="https://www.clinicaanaescapa.es/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Favicon (sustituir por el logo real, ver README-IMAGENES.md) -->
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+<!-- TODO Google: pega aquí tu meta-tag de verificación de Google Search Console -->
+<!-- <meta name="google-site-verification" content="TU_CODIGO_AQUI"> -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Datos estructurados para Google (SEO local / Google Business Profile) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Clínica Dra. Ana Escapa",
+  "image": "https://www.clinicaanaescapa.es/images/og-image.jpg",
+  "url": "https://www.clinicaanaescapa.es/",
+  "telephone": "+34979700940",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Don Sancho, 7, 4ºB",
+    "addressLocality": "Palencia",
+    "postalCode": "34001",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 42.0096,
+    "longitude": -4.5288
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "14:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "16:00",
+      "closes": "20:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/clinicaanaescapa/"
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- Sprite de iconos de línea (reutilizados en las tarjetas de tratamientos) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 3.2c-3.1 4-6.4 7.9-6.4 11.4a6.4 6.4 0 0 0 12.8 0c0-3.5-3.3-7.4-6.4-11.4Z"/></symbol>
+    <symbol id="i-syringe" viewBox="0 0 24 24"><path d="M9 2v3M15 2v3M10 5h4v9h-4z"/><path d="M12 14v6M9.5 20h5"/><circle cx="12" cy="21.2" r="0.6" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5 5l2.1 2.1M16.9 16.9 19 19M19 5l-2.1 2.1M7.1 16.9 5 19"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 13.66-5.66M20 12a8 8 0 0 1-13.66 5.66"/><path d="M17.5 3v3.5H14M6.5 21v-3.5H10"/></symbol>
+    <symbol id="i-waves" viewBox="0 0 24 24"><path d="M3 9c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2"/><path d="M3 15c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2"/></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M2 12h4l2-7 4 14 2-9 2 2h6"/></symbol>
+    <symbol id="i-dots" viewBox="0 0 24 24"><path d="M12 4v4M12 16v4"/><circle cx="9" cy="10.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="15" cy="10.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="12" cy="13.5" r="0.9" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 2.5c1 3-3 4.2-3 8a4 4 0 0 0 8 0c0-1.6-.8-2.4-1.4-3.4.4 2-1 2.6-1.6 1.6-.7-1.1.3-2.3 0-4.2-.2-1.1-1-1.6-2-2Z"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c8 1.5 13-3.5 14-14C9 6 5 10 5 19Z"/><path d="M5 19c3-5 6-8 10-10.5"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 2h6M10 2v6.5L4.5 19a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L14 8.5V2"/><path d="M7.5 15h9"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M7 21h10"/><path d="M4 7h6M14 7h6"/><path d="M4 7 1.5 12a2.5 2.5 0 0 0 5 0L4 7ZM20 7l-2.5 5a2.5 2.5 0 0 0 5 0L20 7Z"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.7-9.8-9.3C.7 8 2 4.5 5.3 3.6c2-.5 4 .3 5.3 2 .5.6 1.2.6 1.7 0 1.3-1.7 3.3-2.5 5.3-2 3.3.9 4.6 4.4 3.1 7.6-2.3 4.6-9.8 9.3-9.8 9.3Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 5.5V11c0 5 3.2 8.7 7.5 10 4.3-1.3 7.5-5 7.5-10V5.5L12 3Z"/><path d="M9 12.2l2 2 4-4.4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.5s7-6.6 7-12A7 7 0 0 0 5 9.5c0 5.4 7 12 7 12Z"/><circle cx="12" cy="9.5" r="2.4"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.4 4.2-2.2 1.7a11 11 0 0 0 5.9 5.9l1.7-2.2 4.2 1.4v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2Z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13.5" r="3.4"/></symbol>
+  </defs>
+</svg>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#inicio" class="brand">
+      <img src="images/logo-mark.svg" alt="Logotipo Clínica Dra. Ana Escapa" class="brand-mark" width="42" height="42">
+      <span class="brand-text">
+        <strong>Clínica</strong> Dra. Ana Escapa
+      </span>
+    </a>
+
+    <div class="nav-collapse" id="navCollapse">
+      <nav class="main-nav" id="mainNav">
+        <a href="#sobre-mi" data-nav>Sobre la clínica</a>
+        <a href="#tratamientos" data-nav>Tratamientos</a>
+        <a href="#por-que" data-nav>Por qué elegirnos</a>
+        <a href="#espacio" data-nav>Nuestro espacio</a>
+        <a href="#ubicacion" data-nav>Ubicación</a>
+        <a href="#contacto" data-nav>Contacto</a>
+      </nav>
+
+      <div class="header-cta">
+        <a href="tel:+34979700940" class="btn btn-ghost">979 70 09 40</a>
+        <a href="https://wa.me/34606311319?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20una%20cita" target="_blank" rel="noopener" class="btn btn-primary">Pedir cita</a>
+      </div>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="hero-photo"></div>
+  </div>
+
+  <div class="container hero-inner">
+    <p class="eyebrow" data-reveal>Clínica Dra. Ana Escapa · Palencia</p>
+    <h1 data-reveal>
+      Medicina estética con criterio médico<br>
+      y trato <em>cercano</em>
+    </h1>
+    <p class="hero-sub" data-reveal>
+      Más de 17 años ayudando a nuestros pacientes a sentirse mejor en su piel, combinando
+      medicina estética no quirúrgica, nutrición y dietética, y homeopatía — con técnicas
+      seguras y de eficacia contrastada.
+    </p>
+    <div class="hero-actions" data-reveal>
+      <a href="https://wa.me/34606311319?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20una%20cita" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Pedir cita por WhatsApp</a>
+      <a href="#tratamientos" class="btn btn-outline btn-lg">Ver tratamientos</a>
+    </div>
+
+    <ul class="hero-trust" data-reveal>
+      <li><strong>+17</strong> años de experiencia</li>
+      <li><strong>Colegiada</strong> en Medicina y Cirugía</li>
+      <li><strong>Formación SEME</strong> 2025</li>
+      <li><strong>FILLMED &amp; Hydrafacial</strong> Partner</li>
+    </ul>
+  </div>
+
+  <a href="#sobre-mi" class="scroll-cue" aria-label="Bajar a la siguiente sección">
+    <span></span>
+  </a>
+</section>
+
+<main>
+
+<!-- ===== SOBRE LA CLÍNICA ===== -->
+<section class="about" id="sobre-mi">
+  <div class="container about-grid">
+    <div class="about-media" data-reveal="left">
+      <div class="photo-frame photo-doctora">
+        <div class="photo-caption">Dra. Ana Escapa</div>
+      </div>
+      <div class="badge-float">
+        <span class="badge-number">17+</span>
+        <span class="badge-label">años de<br>experiencia</span>
+      </div>
+    </div>
+
+    <div class="about-content" data-reveal="right">
+      <p class="section-eyebrow">Sobre la clínica</p>
+      <h2>Una consulta pensada para que te sientas escuchada</h2>
+      <p>
+        La <strong>Dra. Ana Escapa</strong> es licenciada en Medicina y Cirugía y está especializada
+        en medicina estética. Desde hace más de 17 años dirige su clínica en el centro de Palencia,
+        donde combina la medicina estética no quirúrgica con la nutrición, la dietética y la homeopatía
+        para lograr resultados naturales, seguros y adaptados a cada paciente.
+      </p>
+      <p>
+        Cada tratamiento se plantea desde la escucha y la valoración individual: no buscamos
+        transformar, sino realzar lo que ya eres. Formación continua, tecnología de calidad y un
+        trato cercano son la base de la clínica.
+      </p>
+
+      <div class="value-grid">
+        <div class="value-card">
+          <span class="value-icon"><svg class="icon"><use href="#i-heart"></use></svg></span>
+          <h3>Cercanía</h3>
+          <p>Consulta personalizada, sin prisas y con seguimiento real de cada paciente.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-icon"><svg class="icon"><use href="#i-shield"></use></svg></span>
+          <h3>Criterio médico</h3>
+          <p>Diagnóstico profesional y técnicas de eficacia probada, sin postureo.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-icon"><svg class="icon"><use href="#i-leaf"></use></svg></span>
+          <h3>Resultado natural</h3>
+          <p>El objetivo es realzar tu imagen, nunca cambiar quién eres.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat" data-reveal>
+      <span class="stat-number" data-count="17">0</span><span class="stat-plus">+</span>
+      <p>Años de experiencia</p>
+    </div>
+    <div class="stat" data-reveal>
+      <span class="stat-number" data-count="15">0</span><span class="stat-plus">+</span>
+      <p>Tratamientos especializados</p>
+    </div>
+    <div class="stat" data-reveal>
+      <span class="stat-number" data-count="700">0</span><span class="stat-plus">+</span>
+      <p>Pacientes en la comunidad</p>
+    </div>
+    <div class="stat" data-reveal>
+      <span class="stat-number" data-count="100">0</span><span class="stat-plus">%</span>
+      <p>Planes personalizados</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRATAMIENTOS ===== -->
+<section class="services" id="tratamientos">
+  <div class="container">
+    <p class="section-eyebrow center">Tratamientos</p>
+    <h2 class="center" data-reveal>Cuidamos cada detalle, dentro y fuera</h2>
+    <p class="section-lead center" data-reveal>
+      Tecnología de calidad, protocolos seguros y un plan adaptado a lo que necesitas —
+      ya sea en rostro, cuerpo o bienestar general.
+    </p>
+
+    <div class="tabs" role="tablist" data-reveal>
+      <button class="tab-btn is-active" data-tab="facial" role="tab" aria-selected="true">Estética facial</button>
+      <button class="tab-btn" data-tab="corporal" role="tab" aria-selected="false">Estética corporal</button>
+      <button class="tab-btn" data-tab="nutricion" role="tab" aria-selected="false">Nutrición &amp; homeopatía</button>
+    </div>
+
+    <div class="tab-panels">
+      <div class="tab-panel is-active" data-panel="facial">
+        <div class="service-grid">
+          <article class="service-card" data-reveal>
+            <span class="service-icon"><svg class="icon"><use href="#i-droplet"></use></svg></span>
+            <h3>Ácido hialurónico</h3>
+            <p>Aumento y armonización de labios, mentón y nariz sin cirugía, con resultados naturales e hidratación inmediata.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-icon"><svg class="icon"><use href="#i-syringe"></use></svg></span>
+            <h3>Toxina botulínica (bótox)</h3>
+            <p>Suaviza arrugas de expresión en frente y entrecejo con un tratamiento mínimamente invasivo.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-icon"><svg class="icon"><use href="#i-sparkle"></use></svg></span>
+            <h3>Hydrafacial</h3>
+            <p>Limpieza, hidratación y luminosidad inmediata para todo tipo de piel.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-icon"><svg class="icon"><use href="#i-sun"></use></svg></span>
+            <h3>IPL · Luz Intensa Pulsada</h3>
+            <p>Tratamiento de manchas, rosácea, rinofima y capilares mediante pulsos de luz.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-icon"><svg class="icon"><use href="#i-bolt"></use></svg></span>
+            <h3>Láser Elektra / Erbium</h3>
+            <p>Rejuvenecimiento facial sin dolor, apto para todo tipo de pieles.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-icon"><svg class="icon"><use href="#i-refresh"></use></svg></span>
+            <h3>Peeling químico</h3>
+            <p>Renueva la piel eliminando impurezas acumuladas y recuperando el brillo natural.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="corporal">
+        <div class="service-grid">
+          <article class="service-card" data-reveal>
+            <span class="service-icon"><svg class="icon"><use href="#i-flame"></use></svg></span>
+            <h3>Radiofrecuencia</h3>
+            <p>Efecto lipolítico y reafirmante trabajando a distintos niveles de la piel.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-icon"><svg class="icon"><use href="#i-pulse"></use></svg></span>
+            <h3>Presoterapia</h3>
+            <p>Mejora la circulación y reduce la sensación de piernas cansadas y retención de líquidos.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-icon"><svg class="icon"><use href="#i-waves"></use></svg></span>
+            <h3>LPG Endermologie</h3>
+            <p>Masaje mecánico que remodela la silueta y mejora la calidad de la piel.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-icon"><svg class="icon"><use href="#i-dots"></use></svg></span>
+            <h3>Mesoterapia</h3>
+            <p>Microinyecciones de activos específicos según la necesidad de cada zona.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-icon"><svg class="icon"><use href="#i-droplet"></use></svg></span>
+            <h3>Aqualix</h3>
+            <p>Tratamiento de grasa localizada de forma segura y progresiva.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="nutricion">
+        <div class="service-grid">
+          <article class="service-card" data-reveal>
+            <span class="service-icon"><svg class="icon"><use href="#i-leaf"></use></svg></span>
+            <h3>Planes de nutrición</h3>
+            <p>Dietas personalizadas para perder grasa localizada sin perder masa muscular.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-icon"><svg class="icon"><use href="#i-flask"></use></svg></span>
+            <h3>Homeopatía</h3>
+            <p>Enfoque natural complementario adaptado al estado de salud de cada paciente.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-icon"><svg class="icon"><use href="#i-scale"></use></svg></span>
+            <h3>Control de peso</h3>
+            <p>Seguimiento continuo para conseguir cambios de hábitos sostenibles en el tiempo.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== POR QUÉ ELEGIRNOS / MARCAS ===== -->
+<section class="why" id="por-que">
+  <div class="container">
+    <p class="section-eyebrow center">Formación y marcas de referencia</p>
+    <h2 class="center" data-reveal>Trabajamos con los mejores estándares del sector</h2>
+    <div class="brand-strip" data-reveal>
+      <span class="brand-chip">FILLMED Laboratoires</span>
+      <span class="brand-chip">Hydrafacial</span>
+      <span class="brand-chip">SEME · Congreso 2025</span>
+      <span class="brand-chip">Colegio de Médicos</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NUESTRO ESPACIO (galería) ===== -->
+<section class="gallery" id="espacio">
+  <div class="container">
+    <p class="section-eyebrow center">Nuestro espacio</p>
+    <h2 class="center" data-reveal>Una clínica pensada para tu bienestar</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item gallery-item-lg photo-frame photo-clinica-1" data-reveal></div>
+      <div class="gallery-item photo-frame photo-clinica-2" data-reveal></div>
+      <div class="gallery-item photo-frame photo-clinica-3" data-reveal></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== UBICACIÓN ===== -->
+<section class="location" id="ubicacion">
+  <div class="container location-grid">
+    <div class="location-info" data-reveal="left">
+      <p class="section-eyebrow">Ubicación &amp; horario</p>
+      <h2>Te esperamos en el centro de Palencia</h2>
+
+      <ul class="info-list">
+        <li>
+          <span class="info-icon"><svg class="icon"><use href="#i-pin"></use></svg></span>
+          <div>
+            <strong>Dirección</strong>
+            <p>Calle Don Sancho, 7, 4ºB · 34001 Palencia</p>
+          </div>
+        </li>
+        <li>
+          <span class="info-icon"><svg class="icon"><use href="#i-phone"></use></svg></span>
+          <div>
+            <strong>Teléfono</strong>
+            <p><a href="tel:+34979700940">979 70 09 40</a> · <a href="tel:+34606311319">606 31 13 19</a></p>
+          </div>
+        </li>
+        <li>
+          <span class="info-icon"><svg class="icon"><use href="#i-clock"></use></svg></span>
+          <div>
+            <strong>Horario</strong>
+            <p>Lunes a viernes: 9:00–14:00 y 16:00–20:00</p>
+          </div>
+        </li>
+        <li>
+          <span class="info-icon"><svg class="icon"><use href="#i-camera"></use></svg></span>
+          <div>
+            <strong>Instagram</strong>
+            <p><a href="https://www.instagram.com/clinicaanaescapa/" target="_blank" rel="noopener">@clinicaanaescapa</a></p>
+          </div>
+        </li>
+      </ul>
+
+      <a href="https://wa.me/34606311319?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20una%20cita" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Pedir cita por WhatsApp</a>
+    </div>
+
+    <div class="location-map" data-reveal="right">
+      <iframe
+        title="Mapa de la Clínica Dra. Ana Escapa en Palencia"
+        src="https://www.google.com/maps?q=Calle+Don+Sancho+7+Palencia+Espa%C3%B1a&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACTO ===== -->
+<section class="contact" id="contacto">
+  <div class="container contact-grid">
+    <div class="contact-copy" data-reveal="left">
+      <p class="section-eyebrow">Contacto</p>
+      <h2>Cuéntanos qué necesitas</h2>
+      <p>Escríbenos y te responderemos a la mayor brevedad para valorar tu caso y darte cita.</p>
+    </div>
+
+    <!-- Formulario estático: sustituir "TU_ID_FORMSPREE" por tu endpoint real (ver README-IMAGENES.md) -->
+    <form class="contact-form" data-reveal="right" action="https://formspree.io/f/TU_ID_FORMSPREE" method="POST">
+      <div class="form-row">
+        <label>
+          Nombre
+          <input type="text" name="nombre" required>
+        </label>
+        <label>
+          Teléfono
+          <input type="tel" name="telefono" required>
+        </label>
+      </div>
+      <label>
+        Email
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Mensaje
+        <textarea name="mensaje" rows="4" required></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary btn-lg">Enviar mensaje</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="images/logo-mark.svg" alt="Logotipo Clínica Dra. Ana Escapa" class="brand-mark footer-mark" width="36" height="36">
+      <span>Clínica Dra. Ana Escapa</span>
+    </div>
+    <nav class="footer-nav">
+      <a href="#sobre-mi">Sobre la clínica</a>
+      <a href="#tratamientos">Tratamientos</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/clinicaanaescapa/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+      <a href="https://wa.me/34606311319" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year"></span> Clínica Dra. Ana Escapa · Calle Don Sancho, 7, 4ºB, Palencia · Aviso legal · Política de privacidad</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/34606311319?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20una%20cita" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 32 32" width="28" height="28" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-1.9c1.8 1 3.9 1.5 6.1 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22c-2 0-3.9-.6-5.5-1.6l-.4-.2-4.6 1.2 1.2-4.4-.3-.4A9.9 9.9 0 016 15c0-5.5 4.5-10 10-10s10 4.5 10 10-4.5 10-10 10zm5.6-7.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2s-.8 1-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/></svg>
+</a>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
